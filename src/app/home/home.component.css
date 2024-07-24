@@ -1,0 +1,55 @@
+section {
+    background-image: url('src/assets/hero.webp');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    width: 100%;
+    height: 100vh;
+  }
+
+
+.logo{ 
+    font-size: 39px;
+    color: #fff3cd;
+    font-style: italic;
+}
+
+.logo h3 small{
+    font-size: 50px;
+    color: #f7e5ac;
+}
+
+.food-detail p{
+     margin-top: 0;
+    margin-bottom: 1rem;
+    color: white;
+    font-size: 40px;
+    font-weight: bolder;
+    padding-top: 70px;
+}
+    
+
+.food-detail p small{
+    font-size: 60px;
+    color: antiquewhite;
+}
+
+
+
+button{
+    color: #faebd7f5;
+    background-color:rgb(48, 47, 47);
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 80px;
+}
+
+button:hover{
+    color: white;
+    background-color: black;
+    font-size: 18px;
+    transition: all 0.5s;
+   
+}

@@ -1,0 +1,29 @@
+
+<!-- All restaurant list -->
+
+<div class="container mt-5">
+  <h2 class="text-center">All Restaurants </h2>
+  <div *ngIf="restaurants.length === 0" class="alert alert-info">No restaurants added yet.</div>
+  <table *ngIf="restaurants.length > 0" class="table table-bordered ">
+    <thead class="thead-dark">
+      <tr>
+        <th>Restaurant Name</th>
+        <th>Edit Detail</th>
+        <th>Delete Restaurant</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let restaurant of restaurants">
+        <!-- Existing and newly added restaurant name -->
+        <td class="restaurant-name" (click)="viewRestaurant(restaurant)" >{{ restaurant.name }}</td>
+        <!-- Edit the restaurant details -->
+          <td><button class="btn btn-warning btn-sm" (click)="editRestaurant(restaurant)">Edit</button></td>
+          <!-- Delete the restaurant details -->
+          <td> <button class="btn btn-danger btn-sm" (click)="deleteRestaurant(restaurant)">Delete</button></td>  
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="goback py-5" style="text-align: center;">
+  <button class="btn" routerLink="/home" >Go Back</button>
+</div>

@@ -1,0 +1,50 @@
+button{
+    border-radius: 30px;
+    padding: 2px 20px;
+    background-color: #f1f3f58f;
+    color:rgb(39, 171, 175);
+    border: none;
+}
+
+
+button:hover{
+    background-color: #40929c8f;
+    color: white;
+}
+
+
+  .table {
+    margin-top: 20px;
+  }
+
+  
+  .table th{
+    color: rgb(41, 40, 40);
+  }
+
+
+  .table th{
+    background-color: rgb(238 235 235 / 39%);
+  }
+
+  
+  .table th, .table td {
+    border: 1px solid rgb(199, 198, 198);
+  }
+  
+
+  .restaurant-name{
+    cursor: pointer;
+    color: green;
+  }
+
+  
+  .restaurant-name:hover{
+    text-decoration: underline;
+    color: rgb(7, 68, 7);
+  }
+
+  .btn-sm {
+    margin: 2px;
+  }
+  

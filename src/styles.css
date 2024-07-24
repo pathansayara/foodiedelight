@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+h2{
+    color: rgb(14, 141, 150);
+    padding-top: 40px ;
+    padding-bottom: 10px;
+}
+
+form{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 15px 30px;
+    background-color: rgba(252, 255, 255, 0.945);
+}

@@ -1,0 +1,18 @@
+button{
+    background-color: #d6e4f38f;
+    color: rgb(39, 171, 175);
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+form .form-group label {
+    color: #121213; 
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+
+button:hover{
+    background-color: #5ea6f38f;
+    color: rgb(17, 86, 88);
+}

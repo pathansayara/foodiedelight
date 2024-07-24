@@ -1,0 +1,48 @@
+
+<!-- Display the restaurant details -->
+
+<div class="container" *ngIf="restaurant">
+   <div class="row justify-content-center" style="box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; padding: 20px;">
+      <h2 class="text-center">{{ restaurant.name }}</h2>
+      <p class="text-center">{{ restaurant.description }}</p>
+    <div class="col-md-4">
+      <p><strong>Location:</strong> {{ restaurant.location }}</p>
+      <p><strong>Cuisine Type:</strong> {{ restaurant.cuisineType }}</p>
+      <p><strong>Contact Information:</strong> {{ restaurant.contactInformation }}</p>
+      <p><strong>Opening Hours:</strong> {{ restaurant.openingHours }}</p>
+    </div>    
+    <div class="col-md-4">
+      <p><strong>Delivery Radius:</strong> {{ restaurant.deliveryRadius }} km</p>
+      <p><strong>Rating:</strong> {{ restaurant.rating }}</p>
+      <p *ngIf="restaurant.websiteUrl"><strong>Website:</strong> <a [href]="restaurant.websiteUrl" target="_blank">{{ restaurant.websiteUrl }}</a></p>
+      <p *ngIf="restaurant.specialFeatures"><strong>Special Features:</strong> {{ restaurant.specialFeatures }}</p>
+    </div>
+   </div>
+
+   <!-- Display the all menus of particular restaurant-->
+
+    <h3>Menus</h3>
+    <div *ngIf="menus.length === 0">No menus available.</div>
+    <div *ngIf="menus.length > 0" class="row">
+      <div *ngFor="let menu of menus" class="col-md-4">
+        <div class="card mb-3">
+          <img [src]="menu.imageUrl" class="card-img-top" alt="{{ menu.name }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ menu.name }}</h5>
+            <p class="card-text">{{ menu.description }}</p>
+            <p><strong>Price:</strong> {{ menu.price | currency }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!restaurant">
+    <h2>Restaurant not found</h2>
+    <p>The restaurant you are looking for does not exist.</p>
+  </div>
+
+
+  <div class="goback text-center py-5">
+    <button class="btn" routerLink="/restaurant-list">Go Back</button>
+  </div>
+  
